@@ -1,6 +1,7 @@
 import React from 'react';
 import reactCSS from 'reactcss';
 import './App.css';
+import { hsl } from 'color-convert';
 
 const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
   const { outerWidth: width, outerHeight: height } = window;
@@ -31,6 +32,7 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                       var hueLocal = hueValue;
                       var saturationLocal = j * saturationFraction;
                       var luminosityLocal = j * luminosityFraction;
+                      const hexColour = hsl.hex(hueLocal,saturationLocal,luminosityLocal);
                       const styles = reactCSS({
                         default: {
                           color: {
@@ -38,6 +40,7 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                             height: `${oneColorHeight}px`,
                             borderRadius: '5px',
                             background: `hsl(${hueLocal}, ${saturationLocal}%, ${luminosityLocal}%)`,
+                            color: luminosityLocal > 50 ? "#000" : "#fff",
                           },
                           swatch: {
                             padding: '1px',
@@ -51,7 +54,9 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                       });
                       return (
                         <div key={j} style={styles.swatch}>
-                          <div style={styles.color} />
+                          <div style={styles.color} className="colour-cell" onClick={() => {navigator.clipboard.writeText(hexColour)}}>
+                            <p>{hexColour}</p>
+                          </div>
                         </div>
                       );
                     })
