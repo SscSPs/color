@@ -1,6 +1,6 @@
 import React from 'react'
 import { SketchPicker } from 'react-color'
-import { rgbaToHsla } from 'colors-convert'
+import { rgb, hsl } from 'color-convert'
 import ColorGrid from './ColorGrid'
 
 class ColorPickerComponent extends React.Component {
@@ -10,7 +10,6 @@ class ColorPickerComponent extends React.Component {
             r: 241,
             g: 112,
             b: 19,
-            a: 1,
         },
     };
 
@@ -26,15 +25,14 @@ class ColorPickerComponent extends React.Component {
         this.setState( { color: color.rgb } )
     };
     render() {
-        var colorAsHSL = rgbaToHsla(this.state.color);
+        var colorAsHSL = rgb.hsl(this.state.color.r, this.state.color.g, this.state.color.b);
         return (
             <div>
                 <div >
                     <ColorGrid
-                        h={colorAsHSL.h}
-                        a={colorAsHSL.a}
-                        satCount="12"
-                        lumCount="12"
+                        h={colorAsHSL[0]}
+                        satCount="15"
+                        lumCount="15"
                     />
                 </div>
                 <SketchPicker color={this.state.color} onChange={this.handleChange} />
