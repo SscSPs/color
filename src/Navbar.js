@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <nav className='header'>
-      Color
+      Color Picker
     </nav>
   )
 }

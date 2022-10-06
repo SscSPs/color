@@ -77,3 +77,12 @@
   color: white;
   font-size: calc(10px + 2vmin);
 }
+
+.color-picker {
+  color: white;
+  font-weight: 300;
+  font-size: large;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
