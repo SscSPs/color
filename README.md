@@ -33,8 +33,6 @@ The base idea is to get the hue from user and use that to create the pallet,
    The page will reload if you make edits.\
    You will also see any lint errors in the console.
 
-In the project directory, you can run the application by simply starting it up:
-
 # Contributions 
 
 You are welcome to help improve this, I made this last year when i needed to try out a few things.
