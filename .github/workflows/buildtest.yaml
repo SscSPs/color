@@ -1,8 +1,6 @@
 name: Build test workflow
 
 on:
-  push:
-    branches: [ workflowTest ]
   pull_request:
     branches: [ master ]
 
