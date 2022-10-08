@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+.App{
+  background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .App-logo {
@@ -35,4 +35,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 6vh 1vw;
+  border-radius: 35px;
+  margin-top: 12vh;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(5px);
 }

@@ -14,7 +14,7 @@ class ColorGrid extends React.Component {
         // console.log( h, a, satCount, lumCount );
         console.log( oneColorWidth, oneColorHeight );
         return (
-            <div style={{ border: "10px", borderBlock: "10px", borderColor: 'red' }}>
+            <div className="colorgrid" style={{ border: "1px", borderBlock: "10px", borderColor: 'red' }}>
                 {/* create satCount divs  */}
                 {Array( satCount - 1 ).fill( 0 ).map( ( _, i ) => {
                     return (
@@ -33,8 +33,8 @@ class ColorGrid extends React.Component {
                                             background: `hsl(${hLocal}, ${sLocal}%, ${lLocal}%)`,
                                         },
                                         swatch: {
-                                            padding: '5px',
-                                            background: '#000',
+                                            padding: '1px',
+                                            background: '#fff',
                                             borderRadius: '5px',
                                             boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
                                             display: 'inline-block',
