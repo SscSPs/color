@@ -39,3 +39,8 @@ You are welcome to help improve this, I made this last year when i needed to try
 This year, I just refreshed it and pushed it up here.
 Open a PR or an Issue for your improvements/queries, I'll try to reply to as many as I can.
 
+# Contributors
+
+<a href = "https://github.com/SscSPs/color/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=SscSPs/color"/>
+</a>
