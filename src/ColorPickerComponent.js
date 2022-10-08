@@ -20,7 +20,7 @@ const ColorPickerComponent = () => {
     <div className='main'>
       <div>
         <ColorGrid
-          hueCount={colorAsHSL[0]}
+          hueValue={colorAsHSL[0]}
           saturationCount='15'
           luminosityCount='15'
         />

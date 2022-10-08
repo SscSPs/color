@@ -2,7 +2,7 @@ import React from 'react';
 import reactCSS from 'reactcss';
 import './App.css';
 
-const ColorGrid = ({ hueCount, saturationCount, luminosityCount }) => {
+const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
   const { outerWidth: width, outerHeight: height } = window;
 
   const saturationFraction = 100 / (saturationCount - 2);
@@ -17,18 +17,18 @@ const ColorGrid = ({ hueCount, saturationCount, luminosityCount }) => {
       style={{ border: '1px', borderBlock: '10px', borderColor: 'red' }}
     >
       {
-        // create hueCount divs
+        // create saturationCount divs
         Array(saturationCount - 1)
           .fill(0)
           .map((_, i) => {
             return (
               <div key={i} style={{ display: 'flex', flexDirection: 'row' }}>
                 {
-                  // create saturationCount divs
+                  // create luminosityCount divs
                   Array(luminosityCount - 1)
                     .fill(0)
                     .map((_, j) => {
-                      var hueLocal = hueCount;
+                      var hueLocal = hueValue;
                       var saturationLocal = j * saturationFraction;
                       var luminosityLocal = j * luminosityFraction;
                       const styles = reactCSS({
