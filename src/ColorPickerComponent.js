@@ -1,46 +1,35 @@
-import React from 'react'
-import { SketchPicker } from 'react-color'
-import { rgb, hsl } from 'color-convert'
-import ColorGrid from './ColorGrid'
+import React, { useState } from 'react';
+import { SketchPicker } from 'react-color';
+import { rgb } from 'color-convert';
+import ColorGrid from './ColorGrid';
 
-class ColorPickerComponent extends React.Component {
-    state = {
-        displayColorPicker: false,
-        color: {
-            r: 241,
-            g: 112,
-            b: 19,
-        },
-    };
 
-    handleClick = () => {
-        this.setState( { displayColorPicker: !this.state.displayColorPicker } )
-    };
+const ColorPickerComponent = () => {
+  const [displayColorPicker, setDisplayColorPicker] = useState(false);
+  const [color, setColor] = useState({ r: 241, g: 112, b: 19 });
 
-    handleClose = () => {
-        this.setState( { displayColorPicker: false } )
-    };
+  const handleClick = () => setDisplayColorPicker((prev) => !prev);
 
-    handleChange = ( color ) => {
-        this.setState( { color: color.rgb } )
-    };
-    render() {
-        var colorAsHSL = rgb.hsl(this.state.color.r, this.state.color.g, this.state.color.b);
-        return (
-            <div className='main'>
-                <div >
-                    <ColorGrid
-                        h={colorAsHSL[0]}
-                        satCount="15"
-                        lumCount="15"
-                    />
-                </div>
-                <div className='colorpick'>
-                    <SketchPicker color={this.state.color} onChange={this.handleChange} />
-                </div>
-            </div>
-        )
-    }
-}
+  const handleClose = () => setDisplayColorPicker(false);
 
-export default ColorPickerComponent
+  const handleChange = (color) => setColor(color.rgb);
+
+  const colorAsHSL = rgb.hsl(color.r, color.g, color.b);
+
+  return (
+    <div className='main'>
+      <div>
+        <ColorGrid
+          hueValue={colorAsHSL[0]}
+          saturationCount='15'
+          luminosityCount='15'
+        />
+      </div>
+      <div className='colorpick'>
+        <SketchPicker color={color} onChange={handleChange} />
+      </div>
+    </div>
+  );
+};
+
+export default ColorPickerComponent;

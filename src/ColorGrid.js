@@ -1,60 +1,67 @@
-import React from 'react'
-import reactCSS from 'reactcss'
+import React from 'react';
+import reactCSS from 'reactcss';
 import './App.css';
 
-class ColorGrid extends React.Component {
+const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
+  const { outerWidth: width, outerHeight: height } = window;
 
-    render() {
-        const { h, satCount, lumCount } = this.props;
-        const { outerWidth: width, outerHeight: height } = window;
-        const sFraction = ( 100 / ( satCount - 2 ) );
-        const lFraction = ( 100 / ( lumCount - 2 ) );
-        const oneColorWidth = width / ( satCount - 2 ) / 2;
-        const oneColorHeight = height / ( lumCount - 2 ) / 2;
-        // console.log( h, a, satCount, lumCount );
-        console.log( oneColorWidth, oneColorHeight );
-        return (
-            <div className="colorgrid" style={{ border: "1px", borderBlock: "10px", borderColor: 'red' }}>
-                {/* create satCount divs  */}
-                {Array( satCount - 1 ).fill( 0 ).map( ( _, i ) => {
-                    return (
-                        <div key={i} style={{ display: 'flex', flexDirection: 'row' }}>
-                            {/* create lumCount divs  */}
-                            {Array( lumCount - 1 ).fill( 0 ).map( ( _, j ) => {
-                                var hLocal = h;
-                                var sLocal = i * sFraction;
-                                var lLocal = j * lFraction;
-                                const styles = reactCSS( {
-                                    'default': {
-                                        color: {
-                                            width: `${oneColorWidth}px`,
-                                            height: `${oneColorHeight}px`,
-                                            borderRadius: '5px',
-                                            background: `hsl(${hLocal}, ${sLocal}%, ${lLocal}%)`,
-                                        },
-                                        swatch: {
-                                            padding: '1px',
-                                            background: '#fff',
-                                            borderRadius: '5px',
-                                            boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
-                                            display: 'inline-block',
-                                            cursor: 'pointer',
-                                        },
-                                    },
-                                } );
-                                return (
-                                    <div key={j} style={styles.swatch}>
-                                        <div style={styles.color} />
-                                    </div>
-                                )
-                            } )}
+  const saturationFraction = 100 / (saturationCount - 2);
+  const luminosityFraction = 100 / (luminosityCount - 2);
+
+  const oneColorWidth = width / (saturationCount - 2) / 2;
+  const oneColorHeight = height / (luminosityCount - 2) / 2;
+
+  return (
+    <div
+      className='colorgrid'
+      style={{ border: '1px', borderBlock: '10px', borderColor: 'red' }}
+    >
+      {
+        // create saturationCount divs
+        Array(saturationCount - 1)
+          .fill(0)
+          .map((_, i) => {
+            return (
+              <div key={i} style={{ display: 'flex', flexDirection: 'row' }}>
+                {
+                  // create luminosityCount divs
+                  Array(luminosityCount - 1)
+                    .fill(0)
+                    .map((_, j) => {
+                      var hueLocal = hueValue;
+                      var saturationLocal = j * saturationFraction;
+                      var luminosityLocal = j * luminosityFraction;
+                      const styles = reactCSS({
+                        default: {
+                          color: {
+                            width: `${oneColorWidth}px`,
+                            height: `${oneColorHeight}px`,
+                            borderRadius: '5px',
+                            background: `hsl(${hueLocal}, ${saturationLocal}%, ${luminosityLocal}%)`,
+                          },
+                          swatch: {
+                            padding: '1px',
+                            background: '#fff',
+                            borderRadius: '5px',
+                            boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
+                            display: 'inline-block',
+                            cursor: 'pointer',
+                          },
+                        },
+                      });
+                      return (
+                        <div key={j} style={styles.swatch}>
+                          <div style={styles.color} />
                         </div>
-                    )
-                } )}
-            </div>
+                      );
+                    })
+                }
+              </div>
+            );
+          })
+      }
+    </div>
+  );
+};
 
-        )
-    }
-}
-
-export default ColorGrid
+export default ColorGrid;
