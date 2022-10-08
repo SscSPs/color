@@ -3,17 +3,35 @@
 There's one page application that can show you monotone color palets with different shades (S and L)
 The base idea is to get the hue from user and use that to create the pallet, 
 
-## Getting Started
+### Setting up
 
-In the project directory, you can run the application by simply starting it up:
+- In order to run the application on your local machine, follow the steps given below:
 
-### `npm start`
+1. Install Node.js from [https://nodejs.org/en/] 
+2. Clone the repository. You can paste the below command in your local shell/terminal.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+   ```sh
+   git clone https://github.com/SscSPs/color.git
+   ```
+3. Enter the local directory
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+   ```sh
+   cd color
+   ```
+3. Install the required npm packages
+
+   ```sh
+   npm install
+   ```
+4. Start the application 
+    ```sh
+    npm start
+   ```
+   This runs the application in the development mode.\
+   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+   The page will reload if you make edits.\
+   You will also see any lint errors in the console.
 
 # Contributions 
 
