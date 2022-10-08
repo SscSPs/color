@@ -1,14 +1,14 @@
 # Getting Started with Color
 
-There's one page application that can show you monotone color palets with different shades (S and L)
-The base idea is to get the hue from user and use that to create the pallet, 
+A single page application that can show you monotone color palettes with different shades (S and L).
+The base idea is to get the hue from the user and use that to create the palette. 
 
 ### Setting up
 
 - In order to run the application on your local machine, follow the steps given below:
 
 1. Install Node.js from [https://nodejs.org/en/] 
-2. Clone the repository. You can paste the below command in your local shell/terminal.
+2. Clone the repository. You can paste the following command in your local shell/terminal.
 
    ```sh
    git clone https://github.com/SscSPs/color.git
