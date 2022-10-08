@@ -1,6 +1,7 @@
 import React from 'react';
 import reactCSS from 'reactcss';
 import './App.css';
+import { hsl } from 'color-convert';
 
 const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
   const { outerWidth: width, outerHeight: height } = window;
@@ -10,17 +11,6 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
 
   const oneColorWidth = width / (saturationCount - 2) / 2;
   const oneColorHeight = height / (luminosityCount - 2) / 2;
-
-  const hslToHex = (h, s, l) => {
-    l /= 100;
-    const a = s * Math.min(l, 1 - l) / 100;
-    const f = n => {
-      const k = (n + h / 30) % 12;
-      const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
-      return Math.round(255 * color).toString(16).padStart(2, '0');
-    };
-    return `#${f(0)}${f(8)}${f(4)}`;
-  }
 
   return (
     <div
@@ -42,7 +32,7 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                       var hueLocal = hueValue;
                       var saturationLocal = j * saturationFraction;
                       var luminosityLocal = j * luminosityFraction;
-                      const hexColour = hslToHex(hueLocal, saturationLocal, luminosityLocal);
+                      const hexColour = hsl.hex(hueLocal,saturationLocal,luminosityLocal);
                       const styles = reactCSS({
                         default: {
                           color: {
