@@ -5,12 +5,12 @@ import ColorGrid from './ColorGrid';
 
 
 const ColorPickerComponent = () => {
-  const [displayColorPicker, setDisplayColorPicker] = useState(false);
+//   const [displayColorPicker, setDisplayColorPicker] = useState(false);
   const [color, setColor] = useState({ r: 241, g: 112, b: 19 });
 
-  const handleClick = () => setDisplayColorPicker((prev) => !prev);
+//   const handleClick = () => setDisplayColorPicker((prev) => !prev);
 
-  const handleClose = () => setDisplayColorPicker(false);
+//   const handleClose = () => setDisplayColorPicker(false);
 
   const handleChange = (color) => setColor(color.rgb);
 
