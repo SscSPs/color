@@ -3,7 +3,7 @@
 There's one page application that can show you monotone color palets with different shades (S and L)
 The base idea is to get the hue from user and use that to create the pallet, 
 
-### Getting Started
+### Setting up
 
 - In order to run the application on your local machine, follow the steps given below:
 
@@ -13,7 +13,7 @@ The base idea is to get the hue from user and use that to create the pallet,
    ```sh
    git clone https://github.com/SscSPs/color.git
    ```
-3. Enter the repository
+3. Enter the local directory
 
    ```sh
    cd color
@@ -23,7 +23,7 @@ The base idea is to get the hue from user and use that to create the pallet,
    ```sh
    npm install
    ```
-4. Type 
+4. Start the application 
     ```sh
     npm start
    ```
