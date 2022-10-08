@@ -11,6 +11,17 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
   const oneColorWidth = width / (saturationCount - 2) / 2;
   const oneColorHeight = height / (luminosityCount - 2) / 2;
 
+  const hslToHex = (h, s, l) => {
+    l /= 100;
+    const a = s * Math.min(l, 1 - l) / 100;
+    const f = n => {
+      const k = (n + h / 30) % 12;
+      const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+      return Math.round(255 * color).toString(16).padStart(2, '0');
+    };
+    return `#${f(0)}${f(8)}${f(4)}`;
+  }
+
   return (
     <div
       className='colorgrid'
@@ -31,6 +42,7 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                       var hueLocal = hueValue;
                       var saturationLocal = j * saturationFraction;
                       var luminosityLocal = j * luminosityFraction;
+                      const hexColour = hslToHex(hueLocal, saturationLocal, luminosityLocal);
                       const styles = reactCSS({
                         default: {
                           color: {
@@ -38,6 +50,7 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                             height: `${oneColorHeight}px`,
                             borderRadius: '5px',
                             background: `hsl(${hueLocal}, ${saturationLocal}%, ${luminosityLocal}%)`,
+                            color: luminosityLocal > 50 ? "#000" : "#fff",
                           },
                           swatch: {
                             padding: '1px',
@@ -51,7 +64,9 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                       });
                       return (
                         <div key={j} style={styles.swatch}>
-                          <div style={styles.color} />
+                          <div style={styles.color} className="colour-cell" onClick={() => {navigator.clipboard.writeText(hexColour)}}>
+                            <p>{hexColour}</p>
+                          </div>
                         </div>
                       );
                     })
