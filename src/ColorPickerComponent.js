@@ -27,7 +27,7 @@ class ColorPickerComponent extends React.Component {
     render() {
         var colorAsHSL = rgb.hsl(this.state.color.r, this.state.color.g, this.state.color.b);
         return (
-            <div>
+            <div className='main'>
                 <div >
                     <ColorGrid
                         h={colorAsHSL[0]}
@@ -35,7 +35,9 @@ class ColorPickerComponent extends React.Component {
                         lumCount="15"
                     />
                 </div>
-                <SketchPicker color={this.state.color} onChange={this.handleChange} />
+                <div className='colorpick'>
+                    <SketchPicker color={this.state.color} onChange={this.handleChange} />
+                </div>
             </div>
         )
     }
