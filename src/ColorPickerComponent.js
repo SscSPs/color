@@ -39,6 +39,8 @@ const ColorPickerComponent = () => {
           </div>
         </div>
         <div className="colorpick">
+          <div className='color-picker'>Choose any color:</div>
+          <br/>
           <SketchPicker color={color} onChange={handleChange} />
         </div>
       </div>
