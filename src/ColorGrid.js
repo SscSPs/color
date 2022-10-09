@@ -54,7 +54,7 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                       });
                       return (
                         <div key={j} style={styles.swatch}>
-                          <div style={styles.color} className="colour-cell" onClick={() => {navigator.clipboard.writeText(hexColour)}}>
+                          <div style={styles.color} className="color-cell" onClick={() => {navigator.clipboard.writeText(hexColour)}}>
                             <p>{hexColour}</p>
                           </div>
                         </div>
