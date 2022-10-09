@@ -8,8 +8,8 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
   const saturationFraction = 100 / (saturationCount - 2);
   const luminosityFraction = 100 / (luminosityCount - 2);
 
-  const oneColorWidth = width / (saturationCount - 2) / 2;
-  const oneColorHeight = height / (luminosityCount - 2) / 2;
+  const oneColorWidth = 3;
+  const oneColorHeight = 3;
 
   return (
     <div
@@ -34,8 +34,8 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                       const styles = reactCSS({
                         default: {
                           color: {
-                            width: `${oneColorWidth}px`,
-                            height: `${oneColorHeight}px`,
+                            width: `${oneColorWidth}vw`,
+                            height: `${oneColorHeight}vh`,
                             borderRadius: '5px',
                             background: `hsl(${hueLocal}, ${saturationLocal}%, ${luminosityLocal}%)`,
                           },
