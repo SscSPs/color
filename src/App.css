@@ -52,6 +52,22 @@
   backdrop-filter: blur(5px);
 }
 
+.colour-cell {
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+
+.colour-cell p {
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.colour-cell:hover p {
+  opacity: 1;
+}
+
 .header {
   width: 100%;
   height: 60px;
