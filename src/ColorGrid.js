@@ -24,10 +24,10 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
             // create luminosityCount divs
             Array(luminosityCount - 1)
               .fill(0)
-              .map((_, j) => {
+              .map((_, i) => {
                 var hueLocal = hueValue;
-                var saturationLocal = j * saturationFraction;
-                var luminosityLocal = j * luminosityFraction;
+                var saturationLocal = i * saturationFraction;
+                var luminosityLocal = i * luminosityFraction;
                 const hexColour = hsl.hex(
                   hueLocal,
                   saturationLocal,
@@ -53,7 +53,7 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                   },
                 });
                 return (
-                  <div key={j} style={styles.swatch}>
+                  <div key={i} style={styles.swatch}>
                     <div
                       style={styles.color}
                       className="colour-cell"
