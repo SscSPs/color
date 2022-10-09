@@ -67,3 +67,13 @@
 .colour-cell:hover p {
   opacity: 1;
 }
+
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: calc(10px + 2vmin);
+}
