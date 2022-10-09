@@ -43,7 +43,6 @@ git checkout -b <your_branch_name>
 ```
 
 **8.** Perfom your desired changes to the code base.
-> 1. Add a screenshot of the feature you added or the change you made (This is important).
 
 **9.** Track your changes:heavy_check_mark: .
 
@@ -65,12 +64,14 @@ git push -u origin <your_branch_name>
 
 **12.** To create a pull request, click on `compare and pull requests`.
 
-**13.** Add appropriate title and description to your pull request explaining your changes and efforts done.
+**13.** In the PR, Add a screenshot of your change visible on UI(if possible).
 
-**14.** Click on `Create Pull Request`.
+**14.** Add appropriate title and description to your pull request explaining your changes and efforts done.
+
+**15.** Click on `Create Pull Request`.
 
 
-**15.** Woohoo! You have made a PR to the color :boom: . Wait for your submission to be accepted and your PR to be merged.
+**16.** Woohoo! You have made a PR to the color :boom: . Wait for your submission to be accepted and your PR to be merged.
 
 **Thank you for your interest in contributing to our Repo!🏼**
 
