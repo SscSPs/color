@@ -3,6 +3,8 @@
 A single page application that can show you monotone color palettes with different shades (S and L).
 The base idea is to get the hue from the user and use that to create the palette. 
 
+### [🎨 Live Demo (click here)](https:/sscsps.github.io/color)
+
 ## Screenshot
 ![2022-10-08 (3)](https://user-images.githubusercontent.com/96677760/194740917-6bd01c21-6dd8-4f7f-9372-2dd796a9630c.png)
 
