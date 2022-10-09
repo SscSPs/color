@@ -51,3 +51,31 @@
   align-items: center;
   justify-content: center;
 }
+
+.visitGithub{
+  right: 0px;
+  top: 5rem;
+  position: absolute;
+  transition: transform 0.3s;
+  display: block;
+}
+
+.visitGithubBtn {
+  border: none;
+  padding: 8px;
+  display: block;
+  right: 0px;
+  padding-left: 10px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: black;
+}
+
+.visitGithub:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+html{
+  overflow-x: hidden;
+}
