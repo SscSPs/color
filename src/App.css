@@ -1,5 +1,9 @@
-.App{
-  background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.App {
+  background: linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .App-logo {
@@ -37,7 +41,7 @@
   }
 }
 
-.main{
+.main {
   width: 80%;
   margin: auto;
   display: flex;
@@ -48,8 +52,12 @@
   gap: 80px;
   justify-content: center;
   align-items: center;
-  background: rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(5px);
+}
+
+.color-section {
+  margin-bottom: 50px;
 }
 
 .colour-cell {
