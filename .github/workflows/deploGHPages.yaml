@@ -3,6 +3,8 @@ name: Deploy to github Pages
 on:
   pull_request:
     branches: [ gp-pages-test ]
+  push:
+    branches: [ master ]
 
 permissions:
   contents: write
