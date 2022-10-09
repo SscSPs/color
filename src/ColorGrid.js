@@ -4,7 +4,7 @@ import './App.css';
 import { hsl } from 'color-convert';
 
 const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
-  const { outerWidth: width, outerHeight: height } = window;
+  // const { outerWidth: width, outerHeight: height } = window;
 
   const saturationFraction = 100 / (saturationCount - 2);
   const luminosityFraction = 100 / (luminosityCount - 2);
@@ -36,8 +36,8 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                       const styles = reactCSS({
                         default: {
                           color: {
-                            width: `${oneColorWidth}vw`,
-                            height: `${oneColorHeight}vh`,
+                            width: `${oneColorWidth}px`,
+                            height: `${oneColorHeight}px`,
                             borderRadius: '5px',
                             background: `hsl(${hueLocal}, ${saturationLocal}%, ${luminosityLocal}%)`,
                             color: luminosityLocal > 50 ? "#000" : "#fff",
