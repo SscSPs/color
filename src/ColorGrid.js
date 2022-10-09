@@ -21,18 +21,18 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
         // create saturationCount divs
         Array(saturationCount - 1)
           .fill(0)
-          .map((_, i) => {
+          .map((_, saturationStep) => {
             return (
-              <div key={i} style={{ display: 'flex', flexDirection: 'row' }}>
+              <div key={saturationStep} style={{ display: 'flex', flexDirection: 'row' }}>
                 {
                   // create luminosityCount divs
                   Array(luminosityCount - 1)
                     .fill(0)
-                    .map((_, j) => {
+                    .map((_, luminosityStep) => {
                       var hueLocal = hueValue;
-                      var saturationLocal = j * saturationFraction;
-                      var luminosityLocal = j * luminosityFraction;
-                      const hexColour = hsl.hex(hueLocal,saturationLocal,luminosityLocal);
+                      var saturationLocal = saturationStep * saturationFraction;
+                      var luminosityLocal = luminosityStep * luminosityFraction;
+                      const hexColour = hsl.hex(hueLocal, saturationLocal, luminosityLocal);
                       const styles = reactCSS({
                         default: {
                           color: {
@@ -53,8 +53,8 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                         },
                       });
                       return (
-                        <div key={j} style={styles.swatch}>
-                          <div style={styles.color} className="color-cell" onClick={() => {navigator.clipboard.writeText(hexColour)}}>
+                        <div key={luminosityStep} style={styles.swatch}>
+                          <div style={styles.color} className="color-cell" onClick={() => { navigator.clipboard.writeText(hexColour) }}>
                             <p>{hexColour}</p>
                           </div>
                         </div>
