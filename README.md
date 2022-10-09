@@ -9,9 +9,9 @@ The base idea is to get the hue from the user and use that to create the palette
 ![2022-10-08 (3)](https://user-images.githubusercontent.com/96677760/194740917-6bd01c21-6dd8-4f7f-9372-2dd796a9630c.png)
 
 
-### Setting up
+## Setting up
 
-- In order to run the application on your local machine, follow the steps given below:
+In order to run the application on your local machine, follow the steps given below:
 
 1. Install Node.js from [https://nodejs.org/en/] 
 2. Clone the repository. You can paste the following command in your local shell/terminal.
