@@ -1,20 +1,19 @@
-# Getting Started with Color
+# What is Color?
 
 A single page application that can show you monotone color palettes with different shades (S and L).
-The base idea is to get the hue from the user and use that to create the palette. 
+The idea is that it will take in a color from the user and output a palette. 
 
-### [🎨 Live Demo (click here)](https://sscsps.github.io/color)
+### [🎨 Click here for a live demo!](https://sscsps.github.io/color)
 
-## Screenshot
-![2022-10-08 (3)](https://user-images.githubusercontent.com/96677760/194740917-6bd01c21-6dd8-4f7f-9372-2dd796a9630c.png)
+![Color](https://user-images.githubusercontent.com/96677760/194740917-6bd01c21-6dd8-4f7f-9372-2dd796a9630c.png)
 
 
-## Setting up
+## Getting Started
 
 In order to run the application on your local machine, follow the steps given below:
 
-1. Install Node.js from [https://nodejs.org/en/] 
-2. Clone the repository. You can paste the following command in your local shell/terminal.
+1. Download and install Node.js from [here](https://nodejs.org/en) 
+2. Clone the repository.
 
    ```sh
    git clone https://github.com/SscSPs/color.git
@@ -29,23 +28,21 @@ In order to run the application on your local machine, follow the steps given be
    ```sh
    npm install
    ```
-4. Start the application 
+4. Run the application 
     ```sh
     npm start
    ```
-   This runs the application in the development mode.\
-   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+   This will start the application in development mode at [http://localhost:3000](http://localhost:3000).
+   
+   Any errors will be logged in the terminal. If you make any edits, don't worry. The page will automatically update.
 
-   The page will reload if you make edits.\
-   You will also see any lint errors in the console.
-
-# Contributions 
+# Contributing 
 
 You are welcome to help improve this, I made this last year when i needed to try out a few things.
 This year, I just refreshed it and pushed it up here.
 Open a PR or an Issue for your improvements/queries, I'll try to reply to as many as I can.
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for the detailed process for submitting pull requests to us.
+Please read [the contributing guide](CONTRIBUTING.md) for instructions on how to make your changes and submit them.
 
 # Contributors
 
