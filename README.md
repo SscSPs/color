@@ -1,7 +1,7 @@
 # What is Color?
 
 A single page application that can show you monotone color palettes with different shades (S and L).
-The idea is that it will take in a color from the user and output a palette. 
+The idea is that the user will input a color, and the app will output palette from the hue of the color. 
 
 ### [🎨 Click here for a live demo!](https://sscsps.github.io/color)
 
