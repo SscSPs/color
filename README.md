@@ -1,7 +1,18 @@
-<h1 align="center">COLOR</h1>
+<h1 align="center"><img src="https://github.com/SscSPs/color/raw/master/public/favicon.ico">COLOR</h1>
+
+<div align="center">
+  <img src="https://sloc.xyz/github/SscSPs/color" alt="Total lines">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=aritra-tech/SscSPs.color" alt="Number of Visitors">
+  <a href="https://github.com/SscSPs/color/stargazers"><img src="https://img.shields.io/github/stars/SscSPs/color" alt="Stars Badge" /></a>
+  <a href="https://github.com/SscSPs/color/network/members"><img src="https://img.shields.io/github/forks/SscSPs/color" alt="Forks Badge" /></a>
+  <a href="https://github.com/SscSPs/color/pulls"><img src="https://img.shields.io/github/issues-pr/SscSPs/color" alt="Pull Requests Badge" /></a>
+  <a href="https://github.com/SscSPs/color/issues"><img src="https://img.shields.io/github/issues/SscSPs/color" alt="Issues Badge" /></a>
+  <a href="https://github.com/SscSPs/color/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/SscSPs/color?color=2b9348"></a>
+</div>
+
 
 ## Table of Contents
-- [What is Color?](#intro)
+- [What is Color?](#what-is-color)
 - [Description](#description)
 - [Technology Used](#technology-used)
 - [Live Demo](#live-demo)
