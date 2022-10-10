@@ -10,11 +10,10 @@
 - [Contributors](#contributors)
 
 ### What is Color?
-A single page application that can show you monotone color palettes with different shades (S and L).
-The idea is that the user will input a color, and the app will output palette from the hue of the color. 
+Color is a single page application that can show you monotone color palettes with different shades (S and L) according to the input given by the user.
 
 ### Description
-
+It is a simple color picker tool in which the basic idea is that the user will input a color, and the app will output a monochromatic color palette from the hue of the color. Monochromatic color schemes are derived from a single base hue and extended using its shades, tones and tints. From the palette, the user can grab the hex code of any color. This kind of tool is very useful for frontend developers while creating monochromatic theme based designs.
 
 ### Technology Used
 1) ReactJS
