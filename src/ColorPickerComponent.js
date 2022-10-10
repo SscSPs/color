@@ -17,7 +17,7 @@ const ColorPickerComponent = () => {
   const colorAsHSL = rgb.hsl(color.r, color.g, color.b);
 
   return (
-    <div className='main'>
+    <main className='main'>
       <div>
         <ColorGrid
           hueValue={colorAsHSL[0]}
@@ -26,11 +26,10 @@ const ColorPickerComponent = () => {
         />
       </div>
       <div className='colorpick'>
-        <div className='color-picker'>Choose any color:</div>
-        <br/>
+        <p className='color-picker'>Choose any color:</p>
         <SketchPicker color={color} onChange={handleChange} />
       </div>
-    </div>
+    </main>
   );
 };
 
