@@ -4,17 +4,13 @@
   "private": true,
   "homepage": "https://SscSPs.github.io/color",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^5.1.3",
     "color-convert": "^2.0.1",
     "react": "^17.0.2",
     "react-color": "^2.19.3",
     "react-dom": "^17.0.2",
     "react-scripts": "^5.0.1",
-    "react-toastify": "^9.0.8",
-    "web-vitals": "^1.1.2"
+    "react-toastify": "^9.0.8"
   },
   "scripts": {
     "start": "react-scripts start",

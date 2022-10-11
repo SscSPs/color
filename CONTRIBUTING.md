@@ -2,11 +2,11 @@
 
 To contribute, look out for the issues raised by the maintainers as well as the other participants for contributions, and you can raise your issue also.
 
-### To start contributing, follow the below guidelines: 
+### To start contributing, follow the below guidelines:
 
-**1.**  Fork [this](https://github.com/SscSPs/color) repository.
+**1.** Fork [this](https://github.com/SscSPs/color) repository.
 
-**2.**  Clone your forked copy of the project.
+**2.** Clone your forked copy of the project.
 
 ```
 git clone https://github.com/<your_user_name>/SscSPs/color.git
@@ -21,7 +21,7 @@ cd color
 **4.** Add a reference(remote) to the original repository.
 
 ```
-git remote add upstream https://github.com/SscSPs/color.git 
+git remote add upstream https://github.com/SscSPs/color.git
 ```
 
 **5.** Check the remotes for this repository.
@@ -47,7 +47,7 @@ git checkout -b <your_branch_name>
 **9.** Track your changes:heavy_check_mark: .
 
 ```
-git add . 
+git add .
 ```
 
 **10.** Commit your changes .
@@ -70,7 +70,6 @@ git push -u origin <your_branch_name>
 
 **15.** Click on `Create Pull Request`.
 
-
 **16.** Woohoo! You have made a PR to the color :boom: . Wait for your submission to be accepted and your PR to be merged.
 
 **Thank you for your interest in contributing to our Repo!🏼**
@@ -78,7 +77,6 @@ git push -u origin <your_branch_name>
 **Kudos to you🎈**
 
 **Best of luck 👍😊**
-
 
 LOOKING FORWARD TO YOUR CONTRIBUTIONS!
 
