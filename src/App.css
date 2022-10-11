@@ -15,7 +15,7 @@
   flex-wrap: wrap;
   gap: 80px;
   padding: 6vh 1vw;
-  margin-top: 12vh;
+  margin-top: 7vh;
   border-radius: 35px;
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(5px);
@@ -39,8 +39,7 @@
 
 .header {
   width: 100%;
-  height: 60px;
-  margin-top: 2rem;
+  padding-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
