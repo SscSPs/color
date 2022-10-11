@@ -1,6 +1,10 @@
 <h1 align="center"><img src="https://github.com/SscSPs/color/raw/master/public/favicon.ico">COLOR</h1>
 
 <div align="center">
+    <img alt="Desktop" title="#Desktop" src="./public/mockup.jpg" width="680px" />
+</div>
+
+<div align="center">
   <img src="https://sloc.xyz/github/SscSPs/color" alt="Total lines">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=aritra-tech/SscSPs.color" alt="Number of Visitors">
   <a href="https://github.com/SscSPs/color/stargazers"><img src="https://img.shields.io/github/stars/SscSPs/color" alt="Stars Badge" /></a>
@@ -12,13 +16,15 @@
 
 
 ## Table of Contents
-- [What is Color?](#what-is-color)
-- [Description](#description)
-- [Technology Used](#technology-used)
-- [Live Demo](#live-demo)
-- [Getting Started](#getting-started)
-- [How to Contribute?](#how-to-contribute)
-- [Contributors](#contributors)
+- [Table of Contents](#table-of-contents)
+  - [What is Color?](#what-is-color)
+  - [Description](#description)
+  - [Technology Used](#technology-used)
+  - [Live Demo](#live-demo)
+    - [🎨 Click here for a live demo!](#-click-here-for-a-live-demo)
+  - [Getting Started](#getting-started)
+  - [How to Contribute?](#how-to-contribute)
+  - [Contributors](#contributors)
 
 ### What is Color?
 Color is a single page application that can show you monotone color palettes with different shades (S and L) according to the input given by the user.
@@ -27,7 +33,7 @@ Color is a single page application that can show you monotone color palettes wit
 It is a simple color picker tool in which the basic idea is that the user will input a color, and the app will output a monochromatic color palette from the hue of the color. Monochromatic color schemes are derived from a single base hue and extended using its shades, tones and tints. From the palette, the user can grab the hex code of any color. This kind of tool is very useful for frontend developers while creating monochromatic theme based designs.
 
 ### Technology Used
-1) ReactJS
+1) [ReactJS](https://reactjs.org)
 
 ### Live Demo
 #### [🎨 Click here for a live demo!](https://sscsps.github.io/color)
