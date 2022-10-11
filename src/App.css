@@ -40,7 +40,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  font-size: 72px;
+   background: -webkit-linear-gradient(left, rgb(255, 0, 0) , rgb(25, 0, 248));
+   background: -o-linear-gradient(right, rgb(255, 0, 0), rgb(25, 0, 248));
+   background: -moz-linear-gradient(right, rgb(255, 0, 0), rgb(25, 0, 248));
+   background: linear-gradient(to right, rgb(255, 0, 0) , rgb(25, 0, 248)); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: calc(10px + 2vmin);
 }
 
