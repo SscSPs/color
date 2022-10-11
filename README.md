@@ -27,7 +27,10 @@ Color is a single page application that can show you monotone color palettes wit
 It is a simple color picker tool in which the basic idea is that the user will input a color, and the app will output a monochromatic color palette from the hue of the color. Monochromatic color schemes are derived from a single base hue and extended using its shades, tones and tints. From the palette, the user can grab the hex code of any color. This kind of tool is very useful for frontend developers while creating monochromatic theme based designs.
 
 ### Technology Used
-1) ReactJS
+1) ReactJS  
+![](https://img.shields.io/badge/Code-ReactJS-informational?style=flat&logo=react&logoColor=62DAFB&color=62DAFB)
+2) CSS  
+![](https://img.shields.io/badge/Code-CSS3-informational?style=flat&logo=css3&logoColor=214CE5&color=214CE5)
 
 ### Live Demo
 #### [🎨 Click here for a live demo!](https://sscsps.github.io/color)
