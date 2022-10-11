@@ -1,8 +1,8 @@
-import React from "react";
-import reactCSS from "reactcss";
-import "./App.css";
-import { hsl } from "color-convert";
-import { toast } from "react-toastify";
+import React from 'react';
+import reactCSS from 'reactcss';
+import './App.css';
+import { hsl } from 'color-convert';
+import { toast } from 'react-toastify';
 
 const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
   const { outerWidth: width, outerHeight: height } = window;
@@ -15,8 +15,8 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
 
   return (
     <div
-      className="colorgrid"
-      style={{ border: "1px", borderBlock: "10px", borderColor: "red" }}
+      className='colorgrid'
+      style={{ border: '1px', borderBlock: '10px', borderColor: 'red' }}
     >
       {
         // create saturationCount divs
@@ -26,7 +26,7 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
             return (
               <div
                 key={saturationStep}
-                style={{ display: "flex", flexDirection: "row" }}
+                style={{ display: 'flex', flexDirection: 'row' }}
               >
                 {
                   // create luminosityCount divs
@@ -46,17 +46,17 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                           color: {
                             width: `${oneColorWidth}px`,
                             height: `${oneColorHeight}px`,
-                            borderRadius: "5px",
+                            borderRadius: '5px',
                             background: `hsl(${hueLocal}, ${saturationLocal}%, ${luminosityLocal}%)`,
-                            color: luminosityLocal > 50 ? "#000" : "#fff",
+                            color: luminosityLocal > 50 ? '#000' : '#fff',
                           },
                           swatch: {
-                            padding: "1px",
-                            background: "#fff",
-                            borderRadius: "5px",
-                            boxShadow: "0 0 0 1px rgba(0,0,0,.1)",
-                            display: "inline-block",
-                            cursor: "pointer",
+                            padding: '1px',
+                            background: '#fff',
+                            borderRadius: '5px',
+                            boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
+                            display: 'inline-block',
+                            cursor: 'pointer',
                           },
                         },
                       });
@@ -64,15 +64,15 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                         <div key={luminosityStep} style={styles.swatch}>
                           <div
                             style={styles.color}
-                            className="color-cell"
+                            className='color-cell'
                             onClick={() => {
                               navigator.clipboard
                                 .writeText(`#${hexColour}`)
                                 .then(() => {
-                                  toast.success("Color copied.");
+                                  toast.success('Color copied.');
                                 })
                                 .catch(() => {
-                                  toast.error("Failed to copy");
+                                  toast.error('Failed to copy');
                                 });
                             }}
                           >
