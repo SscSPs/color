@@ -1,5 +1,9 @@
 .App {
-  background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .main {
@@ -11,7 +15,7 @@
   flex-wrap: wrap;
   gap: 80px;
   padding: 6vh 1vw;
-  margin-top: 12vh;
+  margin-top: 6vh;
   border-radius: 35px;
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(5px);
@@ -21,6 +25,16 @@
   display: grid;
   place-items: center;
   font-size: 12px;
+  border-radius: 5px;
+}
+
+.color-cell-wrapper {
+  padding: 1px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  cursor: pointer;
 }
 
 .color-cell p {
@@ -36,7 +50,7 @@
 .header {
   width: 100%;
   height: 60px;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,10 +71,10 @@
 .footer a {
   box-shadow: inset 0 0 0 0 #131313;
   color: #131313;
-  margin: 0 -.25rem;
-  padding: 0 .25rem;
-  margin-left: .25rem;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+  margin-left: 0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .footer a:hover {
@@ -83,31 +97,51 @@
   -ms-animation: fadeIn 5s;
 }
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-o-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-ms-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.visitGithub{
+.visitGithub {
   right: 0px;
   top: 5rem;
   position: absolute;
@@ -126,11 +160,26 @@
   background-color: black;
 }
 
-.visitGithub:hover{
+.visitGithub:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 
-html{
+html {
   overflow-x: hidden;
+}
+
+@media (max-width: 800px) {
+  .main {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .color-cell-wrapper {
+    border-radius: 50%;
+  }
+
+  .color-cell {
+    border-radius: 50%;
+  }
 }
