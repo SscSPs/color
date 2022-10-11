@@ -75,9 +75,8 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                                   toast.error('Failed to copy');
                                 });
                             }}
-                          >
-                            <p>#{hexColour}</p>
-                          </div>
+                            title={`#${hexColour}`}
+                          />
                         </div>
                       );
                     })
