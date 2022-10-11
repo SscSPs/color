@@ -10,8 +10,13 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
   const saturationFraction = 100 / (saturationCount - 2);
   const luminosityFraction = 100 / (luminosityCount - 2);
 
-  const oneColorWidth = width / (saturationCount - 2) / 2;
-  const oneColorHeight = height / (luminosityCount - 2) / 2;
+  let oneColorWidth = width / (saturationCount - 2) / 2;
+  let oneColorHeight = height / (luminosityCount - 2) / 2;
+
+  if (oneColorWidth < 40) {
+    oneColorHeight = 40;
+    oneColorWidth = 40;
+  }
 
   return (
     <div
@@ -46,22 +51,16 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                           color: {
                             width: `${oneColorWidth}px`,
                             height: `${oneColorHeight}px`,
-                            borderRadius: '5px',
                             background: `hsl(${hueLocal}, ${saturationLocal}%, ${luminosityLocal}%)`,
                             color: luminosityLocal > 50 ? '#000' : '#fff',
-                          },
-                          swatch: {
-                            padding: '1px',
-                            background: '#fff',
-                            borderRadius: '5px',
-                            boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
-                            display: 'inline-block',
-                            cursor: 'pointer',
                           },
                         },
                       });
                       return (
-                        <div key={luminosityStep} style={styles.swatch}>
+                        <div
+                          className='color-cell-wrapper'
+                          key={luminosityStep}
+                        >
                           <div
                             style={styles.color}
                             className='color-cell'
