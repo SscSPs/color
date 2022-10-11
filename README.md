@@ -1,7 +1,7 @@
 <h1 align="center"><img src="https://github.com/SscSPs/color/raw/master/public/favicon.ico">COLOR</h1>
 
 <div align="center">
-    <img alt="Desktop" title="#Desktop" src="./src/assets/mockup.jpg" width="680px" />
+    <img alt="Desktop" title="#Desktop" src="./images/mockup.jpg" width="680px" />
 </div>
 
 <div align="center">
