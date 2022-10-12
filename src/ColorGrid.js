@@ -1,8 +1,8 @@
-import React from "react";
-import reactCSS from "reactcss";
-import "./App.css";
-import { hsl } from "color-convert";
-import { toast } from "react-toastify";
+import React from 'react';
+import reactCSS from 'reactcss';
+import './App.css';
+import { hsl } from 'color-convert';
+import { toast } from 'react-toastify';
 
 const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
   const { outerWidth: width, outerHeight: height } = window;
@@ -10,13 +10,17 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
   const saturationFraction = 100 / (saturationCount - 2);
   const luminosityFraction = 100 / (luminosityCount - 2);
 
-  const oneColorWidth = width / (saturationCount - 2) / 2;
-  const oneColorHeight = height / (luminosityCount - 2) / 2;
+  let oneColorWidth = width / (saturationCount - 2) / 2;
+  let oneColorHeight = height / (luminosityCount - 2) / 2;
 
+  if (oneColorWidth < 40) {
+    oneColorHeight = 40;
+    oneColorWidth = 40;
+  }
   return (
     <div
-      className="colorgrid"
-      style={{ border: "1px", borderBlock: "10px", borderColor: "red" }}
+      className='colorgrid'
+      style={{ border: '1px', borderBlock: '10px', borderColor: 'red' }}
     >
       {
         // create saturationCount divs
@@ -26,7 +30,7 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
             return (
               <div
                 key={saturationStep}
-                style={{ display: "flex", flexDirection: "row" }}
+                style={{ display: 'flex', flexDirection: 'row' }}
               >
                 {
                   // create luminosityCount divs
@@ -46,38 +50,31 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                           color: {
                             width: `${oneColorWidth}px`,
                             height: `${oneColorHeight}px`,
-                            borderRadius: "5px",
                             background: `hsl(${hueLocal}, ${saturationLocal}%, ${luminosityLocal}%)`,
-                            color: luminosityLocal > 50 ? "#000" : "#fff",
-                          },
-                          swatch: {
-                            padding: "1px",
-                            background: "#fff",
-                            borderRadius: "5px",
-                            boxShadow: "0 0 0 1px rgba(0,0,0,.1)",
-                            display: "inline-block",
-                            cursor: "pointer",
+                            color: luminosityLocal > 50 ? '#000' : '#fff',
                           },
                         },
                       });
                       return (
-                        <div key={luminosityStep} style={styles.swatch}>
+                        <div
+                          key={luminosityStep}
+                          className='color-cell-wrapper'
+                        >
                           <div
                             style={styles.color}
-                            className="color-cell"
+                            className='color-cell'
                             onClick={() => {
                               navigator.clipboard
                                 .writeText(`#${hexColour}`)
                                 .then(() => {
-                                  toast.success("Color copied.");
+                                  toast.success('Color copied.');
                                 })
                                 .catch(() => {
-                                  toast.error("Failed to copy");
+                                  toast.error('Failed to copy');
                                 });
                             }}
-                          >
-                            <p>#{hexColour}</p>
-                          </div>
+                            title={`#${hexColour}`}
+                          />
                         </div>
                       );
                     })
