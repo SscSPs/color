@@ -1,9 +1,6 @@
 .App {
-  background: linear-gradient(
-    to right,
-    #3f5efb,
-    #fc466b
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ background: linear-gradient(to right, #3F5EFB, #FC466B);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .main {
@@ -54,7 +51,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  background: linear-gradient(to right, #ff0051 35%, #0245ff 70%);
+  background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
   font-size: calc(10px + 2vmin);
 }
 
@@ -96,10 +96,12 @@
   -o-animation: fadeIn 5s;
   -ms-animation: fadeIn 5s;
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -109,6 +111,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -118,6 +121,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -127,6 +131,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -136,6 +141,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
