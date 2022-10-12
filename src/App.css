@@ -1,5 +1,6 @@
 .App {
-  background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #3F5EFB, #FC466B);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .main {
@@ -40,13 +41,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 72px;
-   background: -webkit-linear-gradient(left, rgb(255, 0, 0) , rgb(25, 0, 248));
-   background: -o-linear-gradient(right, rgb(255, 0, 0), rgb(25, 0, 248));
-   background: -moz-linear-gradient(right, rgb(255, 0, 0), rgb(25, 0, 248));
-   background: linear-gradient(to right, rgb(255, 0, 0) , rgb(25, 0, 248)); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #ff0051 35%, #0245ff 70%);
+  background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
   font-size: calc(10px + 2vmin);
 }
 
@@ -88,32 +86,58 @@
   -o-animation: fadeIn 5s;
   -ms-animation: fadeIn 5s;
 }
+
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @-o-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @-ms-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
-.visitGithub{
+.visitGithub {
   right: 0px;
   top: 5rem;
   position: absolute;
@@ -132,11 +156,11 @@
   background-color: black;
 }
 
-.visitGithub:hover{
+.visitGithub:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 
-html{
+html {
   overflow-x: hidden;
 }
