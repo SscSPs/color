@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from 'react-dom';
 import { SocialIcon } from 'react-social-icons';
 const year = new Date().getFullYear();
 
