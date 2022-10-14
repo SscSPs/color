@@ -1,6 +1,8 @@
+import logo from './logo.svg'
 const Navbar = () => (
   <nav className='header'>
-    <h1>Color Picker</h1>
+    <img src={logo} alt="Logo"  className='header--logo'/>
+    <h1 className='header--text'>Color Picker</h1>
   </nav>
 );
 
