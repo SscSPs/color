@@ -16,6 +16,7 @@
   border-radius: 35px;
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(5px);
+  
 }
 
 .color-cell {
@@ -47,34 +48,55 @@
 .header {
   width: 100%;
   height: 60px;
-  margin-top: 2.5rem;
+  padding: 1.5em;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right, #ff0051 35%, #0245ff 70%);
+  background: linear-gradient(to right, #ff0051 35%, #0245ff 58%);
   background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
   font-size: calc(10px + 2vmin);
+  box-shadow: 5px 5px 10px #3d3939;
+  
+}
+
+.header--text{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  font-weight: 900;
+  
+}
+
+.header--logo{
+  width: 50px;
+  height: 50px;
+  align-self: left;
 }
 
 .footer {
+  font-size: 20px;
   width: 100%;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  margin: 1rem 0;
+  margin-top: 50px;
+  padding-top: 2px;
+  box-shadow: 5px -5px 100px #131313;
+  background-color: #131313;
+  font-weight: 400;
 }
 
 .footer a {
   box-shadow: inset 0 0 0 0 #131313;
-  color: #131313;
   margin: 0 -0.25rem;
   padding: 0 0.25rem;
   margin-left: 0.25rem;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 .footer a:hover {
