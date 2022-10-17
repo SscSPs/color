@@ -6,11 +6,15 @@ import { hsl } from 'color-convert';
 const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
   // const { outerWidth: width, outerHeight: height } = window;
 
+  
   const saturationFraction = 100 / (saturationCount - 2);
   const luminosityFraction = 100 / (luminosityCount - 2);
+  
+  
 
-  const oneColorWidth = 3;
-  const oneColorHeight = 3;
+  let oneColorWidth = 70 / (saturationCount - 2) / 2;
+  let oneColorHeight = 70 / (luminosityCount - 2) / 2;
+
 
   return (
     <div
@@ -36,8 +40,8 @@ const ColorGrid = ({ hueValue, saturationCount, luminosityCount }) => {
                       const styles = reactCSS({
                         default: {
                           color: {
-                            width: `${oneColorWidth}px`,
-                            height: `${oneColorHeight}px`,
+                            width: `${oneColorWidth}vw`,
+                            height: `${oneColorHeight}vh`,
                             borderRadius: '5px',
                             background: `hsl(${hueLocal}, ${saturationLocal}%, ${luminosityLocal}%)`,
                             color: luminosityLocal > 50 ? "#000" : "#fff",
