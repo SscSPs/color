@@ -178,6 +178,7 @@
   position: absolute;
   transition: transform 0.3s;
   display: block;
+  z-index:1;
 }
 
 .visitGithubBtn {
@@ -203,7 +204,7 @@ html {
 @media (max-width: 800px) {
   .main {
     width: 100%;
-    margin-top:10vh;
+    
     
   }
 
