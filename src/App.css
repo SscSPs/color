@@ -86,8 +86,11 @@
   margin-top: 50px;
   padding-top: 2px;
   box-shadow: 5px -5px 100px #131313;
-  background-color: #131313;
+  background-color: #474747;
   font-weight: 400;
+  position:absolute;
+  bottom: 0px;
+  
 }
 
 .footer a {
@@ -200,7 +203,8 @@ html {
 @media (max-width: 800px) {
   .main {
     width: 100%;
-    background: rgba(255, 255, 255, 0.1);
+    margin-top:10vh;
+    
   }
 
   .color-cell-wrapper {
